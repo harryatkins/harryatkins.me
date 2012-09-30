@@ -15,7 +15,7 @@
 	header nav select { display: inline-block; }
 	header { position: relative;}
 	#portfoliocontainer img { width: 180px; height: 180px; margin: 0 5px 5px 0; }
-	a.icon span { font-size: 35px; }
+	a.icon span, a.icon2 span { font-size: 35px; }
 	footer h3 { font-size: 25px;}
 	footer {margin-top: -120px; height: 120px; padding: 10px 0;}
 	#main {padding-bottom: 120px;}
