@@ -1,0 +1,476 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$home-bg: #02c9c9;
+$home-hover: #0d4040;
+$work-bg: #2a2a2a;
+$work-hover: #cc4141;
+$about-bg: #36cc4b;
+$about-hover: #93ffa2;
+$contact-bg: #e74141;
+$contact-hover: #4e0b0b;
+$text-colour: #fff;
+
+@mixin breakpoint($point) {
+  @if $point == break-one {
+    @media (max-width: 780px) { @content; }
+  }
+  @else if $point == break-two {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+
+@font-face {
+	font-family: 'harryatkins-me';
+	src:url('fonts/harryatkins-me.eot');
+	src:url('fonts/harryatkins-me.eot?#iefix') format('embedded-opentype'),
+		url('fonts/harryatkins-me.woff') format('woff'),
+		url('fonts/harryatkins-me.ttf') format('truetype'),
+		url('fonts/harryatkins-me.svg#harryatkins-me') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body#home {
+  background: $home-bg;
+  color: $text-colour;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  text-align: center;
+  padding: 50px 0;
+  ::selection {
+	background: darken($home-bg, 20); /* Safari */
+	color: white;
+	}
+::-moz-selection {
+	background: darken($home-bg, 20); /* Firefox */
+	color: white;
+}
+  a {
+    color: $text-colour;
+    text-decoration: none;
+    &:hover, &.current {
+      color: $home-hover;
+      border-color: $home-hover;
+    }
+  }
+}
+
+a:active {
+  outline: none;
+}
+
+a.cv-link {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  background: white;
+  color: $about-bg!important;
+}
+
+a.cv-link:hover {
+  color: white!important;
+  background: $about-bg;
+} 
+
+body#work {
+  background: $work-bg;
+  color: $text-colour;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  text-align: center;
+  padding: 50px 0;
+  ::selection {
+	background: white;
+	color: $work-bg;
+	}
+::-moz-selection {
+	background: white;
+	color: $work-bg;
+}
+  a {
+    color: $text-colour;
+    text-decoration: none;
+    &:hover, &.current {
+      color: $work-hover;
+      border-color: $work-hover;
+    }
+  }
+}
+
+body#about {
+  background: $about-bg;
+  color: $text-colour;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  text-align: center;
+  padding: 50px 0;
+  ::selection {
+	background: darken($about-bg, 20); /* Safari */
+	color: white;
+	}
+::-moz-selection {
+	background: darken($about-bg, 20); /* Firefox */
+	color: white;
+}
+  a {
+    color: $text-colour;
+    text-decoration: none;
+    &:hover, &.current {
+      color: $about-hover;
+      border-color: $about-hover;
+    }
+  }
+}
+
+body#contact {
+  background: $contact-bg;
+  color: $text-colour;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  text-align: center;
+  padding: 50px 0;
+  ::selection {
+	background: darken($contact-bg, 20); /* Safari */
+	color: white;
+	}
+::-moz-selection {
+	background: darken($contact-bg, 20); /* Firefox */
+	color: white;
+}
+  a {
+    color: $text-colour;
+    text-decoration: none;
+    &:hover, &.current {
+      color: $contact-hover;
+      border-color: $contact-hover;
+    }
+  }
+}
+
+
+
+#logo {
+  display: inline-block;
+  border: 3px solid $text-colour;
+  padding: 5px;
+  margin: 0 0 20px 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  h1 {
+    font-family: 'BebasNeueRegular';
+    font-size: 30px;
+    line-height: 18px;
+    margin-top: 7px;
+    span {
+      font-size: 18px;
+      position: relative;
+      left: -1px;
+    }
+  }
+}
+
+header nav ul {
+  li {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    @include breakpoint(break-two) { margin: 20px 10px; }
+    &:nth-child(-n+3):after {
+      content: ".";
+      position: absolute;
+      bottom: 0;
+      right: -20px;
+      @include breakpoint(break-two) { display: none; }
+    }
+    &:nth-child(3) a span {
+      font-size: 48px;
+      line-height: 25px;
+    }
+     &:nth-child(4) a span {
+     font-size: 27px;
+      line-height: 35px;
+    }
+    a {
+      font-size: 14px;
+      display: block;
+      span {
+        font-family: 'harryatkins-me';
+        font-size: 30px;
+        margin-bottom: 5px;
+        display: inline-block;
+        position: relative;
+        bottom: 0;
+        -webkit-transition: bottom 0.1s ease;
+        -moz-transition: bottom 0.1s ease;
+        -o-transition: bottom 0.1s ease;
+        transition: bottom 0.1s ease;
+      }
+      &:hover span {
+        bottom: 5px;
+      }
+    }
+  }
+}
+
+h2 {
+  font-family: 'BebasNeueRegular';
+  font-size: 72px;
+  -webkit-transition: all 0.1s ease;
+        -moz-transition: all 0.1s ease;
+        -o-transition: all 0.1s ease;
+        transition: all 0.1s ease;
+  @include breakpoint(break-one) { font-size: 40px; }
+}
+
+h3 {
+  text-transform: lowercase;
+  font-size: 15px;
+  margin-top: -10px;
+  @include breakpoint(break-one) { margin-top: -5px; }
+}
+
+.main-content {
+  margin: 45px 0 0 0;
+  #services {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+    .service {
+      display: inline-block;
+      width: 33%;
+      height: 250px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      .service-description {
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        top: 30px;
+        left: 350px;
+        p {
+          line-height: 20px;
+        }
+        &:hover {
+          color: $home-hover;
+          cursor: pointer;
+        }
+      }    
+      @include breakpoint(break-one) { width: 45%; }
+      @include breakpoint(break-two) { width: 60%; height: 200px; }
+      .service-icon {
+        position: relative;
+        left: 0;
+        width: 100%;
+        display: inline-block;
+      }
+      a {
+        font-size: 18px;
+        span {
+          font-family: 'harryatkins-me';
+          font-size: 120px;
+          position: relative;
+          bottom: 0;
+          -webkit-transition: bottom 0.1s ease;
+          -moz-transition: bottom 0.1s ease;
+          -o-transition: bottom 0.1s ease;
+          transition: bottom 0.1s ease;
+        }
+        &:hover span {
+          bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  p {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  #social {
+    li {
+      display: inline-block;
+      margin: 10px;
+      a {
+        font-size: 10px;
+        display: block;
+        span {
+          font-family: 'harryatkins-me';
+          font-size: 30px;
+          margin-bottom: 10px;
+          display: inline-block;
+          opacity: 0;
+          -webkit-transition: all 0.1s ease;
+          -moz-transition: all 0.1s ease;
+          -o-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+        }
+        &:hover span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#work-grid {
+  max-width: 1200px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+#filter-nav {
+  margin: 20px 0 30px 0;
+  li {
+    display: inline-block;
+    margin: 10px;
+    a {
+      padding: 20px;
+      background: $work-hover;
+      color: white;
+      display: block;
+      &:hover {
+        color: white;
+        background: darken($work-hover, 10);
+      }
+    }
+    &.current a {
+      background: darken($work-hover, 10);
+    }
+  }
+}
+
+.work-link {
+  color: $work-hover !important;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.work-thumb {
+  img {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  }
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  .work-description {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 210px;
+    height: 210px;
+    display: none;
+    color: white !important;
+    font-family: 'BebasNeueRegular';
+    font-size: 2em;
+  }
+  &:hover {
+   img {
+    opacity: 0.5; 
+    }
+    .work-description {
+      display: inline-block;
+    }
+  }
+}
+
+#portrait {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: url('../img/portrait.jpg'); 
+  background-size: 100%;
+  margin: 10px auto 30px auto;
+  border: 4px solid $about-bg;
+  -webkit-transition: all 0.1s ease;
+          -moz-transition: all 0.1s ease;
+          -o-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+  &:hover {
+    border: 10px solid $about-hover;
+    -webkit-transform: rotate(-7deg);
+	-moz-transform: rotate(-7deg);
+	transform: rotate(-7deg);
+
+  }
+}
+
+#about-text {
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  width: 90%;
+  .col {
+    width: 33%; 
+    float: left;
+    margin: 30px 0;
+    @include breakpoint(break-one) { width: 100%;}
+    ul li {
+      margin: 10px;
+      span {
+        font-family: 'harryatkins-me';
+        font-weight: normal;
+        font-size: 35px;
+        margin: 10px 10px 0 0;
+        position: relative;
+        top: 5px;
+      }
+    }
+    p {
+      padding: 0 20px;
+      line-height: 20px;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#contact-form {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hire {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
