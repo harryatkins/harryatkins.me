@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-532 0 33 33">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Logo);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #262755;
+      }
+
+      .cls-3 {
+        fill: #262755;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-Logo">
+      <rect x="-532" width="33" height="33"/>
+    </clipPath>
+  </defs>
+  <g id="Logo" class="cls-1">
+    <g id="Logo-2" data-name="Logo" transform="translate(-664 -192)">
+      <line id="Line_1" data-name="Line 1" class="cls-2" y1="7.171" x2="3.224" transform="translate(136.025 199.193)"/>
+      <line id="Line_2" data-name="Line 2" class="cls-2" x1="14.008" y1="1.167" transform="translate(139.249 199.193)"/>
+      <line id="Line_3" data-name="Line 3" class="cls-2" y1="3.28" x2="3.891" transform="translate(153.257 197.081)"/>
+      <line id="Line_4" data-name="Line 4" class="cls-2" x2="12.34" y2="1.056" transform="translate(144.807 196.025)"/>
+      <line id="Line_5" data-name="Line 5" class="cls-2" x1="5.559" y2="3.168" transform="translate(139.249 196.025)"/>
+      <line id="Line_6" data-name="Line 6" class="cls-2" x1="3.891" y1="13.007" transform="translate(139.249 199.193)"/>
+      <line id="Line_7" data-name="Line 7" class="cls-2" y1="11.84" x2="10.117" transform="translate(143.14 200.36)"/>
+      <line id="Line_8" data-name="Line 8" class="cls-2" x1="9.005" y1="9.005" transform="translate(153.257 200.36)"/>
+      <line id="Line_9" data-name="Line 9" class="cls-2" x1="5.114" y1="12.285" transform="translate(157.148 197.081)"/>
+      <line id="Line_10" data-name="Line 10" class="cls-2" x1="9.505" y2="11.006" transform="translate(152.756 209.366)"/>
+      <line id="Line_11" data-name="Line 11" class="cls-2" x2="9.617" y2="8.171" transform="translate(143.14 212.201)"/>
+      <line id="Line_12" data-name="Line 12" class="cls-2" x1="3.335" y2="6.059" transform="translate(139.805 212.201)"/>
+      <line id="Line_13" data-name="Line 13" class="cls-2" x1="12.952" y1="2.112" transform="translate(139.805 218.26)"/>
+      <line id="Line_14" data-name="Line 14" class="cls-2" x2="3.78" y2="11.896" transform="translate(136.025 206.364)"/>
+      <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(141.115 210.176)"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(137.224 197.168)"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(151.232 198.336)"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(155.123 195.056)"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(142.783 194)"/>
+      <circle id="Ellipse_6" data-name="Ellipse 6" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(160.237 207.341)"/>
+      <circle id="Ellipse_7" data-name="Ellipse 7" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(150.732 218.347)"/>
+      <circle id="Ellipse_8" data-name="Ellipse 8" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(137.78 216.235)"/>
+      <circle id="Ellipse_9" data-name="Ellipse 9" class="cls-3" cx="1.881" cy="1.881" r="1.881" transform="translate(134 204.339)"/>
+    </g>
+  </g>
+</svg>
